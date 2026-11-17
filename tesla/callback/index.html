@@ -1,0 +1,8 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Tesla authorization</title></head>
+<body style="font-family:sans-serif;padding:2em">
+<h2>Tesla authorization code</h2>
+<p>Copy this code and paste it into the masked box in Cabin Commander:</p>
+<input id="c" readonly style="width:100%;font-size:1em;padding:.5em">
+<p><button onclick="navigator.clipboard.writeText(document.getElementById('c').value);this.textContent='Copied'">Copy code</button></p>
+<script>var p=new URLSearchParams(location.search);document.getElementById('c').value=p.get('code')||'(no code found: '+(p.get('error')||'unknown')+')';</script>
+</body></html>
